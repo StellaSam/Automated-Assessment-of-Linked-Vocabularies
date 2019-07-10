@@ -13,7 +13,12 @@ def chkCurrentWriteRow(row):
 		row = 2
 	return(row)
 
-fPath="/Users/Stella/Documents/Ph.D. Research/Code/Output(SWJ)"
+#fPath="/Users/Stella/Documents/Ph.D. Research/Tool/Tool_Output_SWJ"
+#fPath="/Users/Stella/Documents/Ph.D. Research/Tool/Tool_Output_LOV"
+#fPath="/Users/Stella/Documents/Ph.D. Research/Tool/Single_Test_Output"
+#fPath="/Users/Stella/Documents/Ph.D. Research/Base_URI_Tool/Base_URI_Tool_Output(SWJ)"
+#fPath="/Users/Stella/Documents/Ph.D. Research/Base_URI_Tool/Base_URI_Tool_Output(LOV)"
+fPath="YOUR OUTPUT FILE LOCATION HERE"
 bFileName="vocab_Base.xlsx"
 bFile=fPath+"/"+bFileName
 bwb=load_workbook(filename=bFile)

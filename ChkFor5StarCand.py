@@ -10,8 +10,9 @@ from VBaseFunctions import *
 #bPath="/Users/Stella/Documents/Ph.D. Research/Tool/Tool_Output_SWJ"
 #bPath="/Users/Stella/Documents/Ph.D. Research/Tool/Tool_Output_LOV"
 #bPath="/Users/Stella/Documents/Ph.D. Research/Tool/Single_Test_Output"
-bPath="/Users/Stella/Documents/Ph.D. Research/Base_URI_Tool/Base_URI_Tool_Output(SWJ)"
+#bPath="/Users/Stella/Documents/Ph.D. Research/Base_URI_Tool/Base_URI_Tool_Output(SWJ)"
 #bPath="/Users/Stella/Documents/Ph.D. Research/Base_URI_Tool/Base_URI_Tool_Output(LOV)"
+bPath="YOUR OUTPUT FILE LOCATION HERE"
 bFileName="vocab_Base.xlsx"
 bFile=bPath+"/"+bFileName
 bwb=load_workbook(filename=bFile)

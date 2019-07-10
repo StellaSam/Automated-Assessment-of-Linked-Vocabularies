@@ -76,7 +76,7 @@ def collectFromLinksInfo(vocab, bFile, bws, row):
 		def _init_ (self, retFromLinksList, retRow):
 			self.retFromLinksList=[]
 			self.retRow=row
-
+	
 	if (bws[bInd].value != None):
 		fromLinksList.append(bws[bInd].value)
 	

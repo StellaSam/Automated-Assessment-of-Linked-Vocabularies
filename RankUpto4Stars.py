@@ -62,7 +62,11 @@ def initExcelValues(vFile, bVocab, lToDict, fMeta, sRate):
 
 	return(writeExcelValues)
 
-oPath="/Users/Stella/Documents/Ph.D. Research/Code/Output(SWJ)"
+#oPath="/Users/Stella/Documents/Ph.D. Research/Tool/Tool_Output_SWJ"
+#oPath="/Users/Stella/Documents/Ph.D. Research/Tool/Tool_Output_LOV"
+#oPath="/Users/Stella/Documents/Ph.D. Research/Base_URI_Tool/Base_URI_Tool_Output(SWJ)"
+#oPath="/Users/Stella/Documents/Ph.D. Research/Base_URI_Tool/Base_URI_Tool_Output(LOV)"
+oPath="YOUR OUTPUT FILE LOCATION HERE"
 bFileName="vocab_Base.xlsx"
 bFile=oPath+"/"+bFileName
 
@@ -74,7 +78,11 @@ if (os.path.isfile(bFile)):
 	bVocabTypeList=buildBaseList(bFile)
 eligVocabList=[]
 
-iPath="/Users/Stella/Documents/Ph.D. Research/Code/Input(SWJ)"
+#iPath="/Users/Stella/Documents/Ph.D. Research/Tool/Tool_Input_SWJ"
+#iPath="/Users/Stella/Documents/Ph.D. Research/Tool/Tool_Input_LOV"
+#iPath="/Users/Stella/Documents/Ph.D. Research/Base_URI_Tool/Base_URI_Tool_Input(SWJ)"
+#iPath="/Users/Stella/Documents/Ph.D. Research/Base_URI_Tool/Base_URI_Tool_Input(LOV)"
+iPath="YOUR INPUT FILE LOCATION HERE"	
 filesOnly=[mFile for mFile in os.listdir(iPath) if isfile(join(iPath,mFile))]
 currentWriteRow=2
 oFileName="Ranked_Vocabs.xlsx"
@@ -116,10 +124,10 @@ for mFile in filesOnly:
 			NSDict=buildNSDict(lineList, numLinesinFile)
 
 			fDupVocab=False
-			baseURL=findBase(lineList, NSDict)
+			baseURL=findBase(lineList, NSDict,mFile)
+			star=incStar(star)
 			modelBase=baseURL.vocabBase
 			if (baseURL.fBase):
-				star=incStar(star)
 				if (fExistVocabBase):
 					fDupVocab=checkIfDupBase(modelBase, bVocabTypeList)
 
